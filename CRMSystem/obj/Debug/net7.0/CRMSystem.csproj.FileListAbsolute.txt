@@ -33,3 +33,4 @@ C:\Users\aalia\source\repos\CRMSystem\CRMSystem\obj\Debug\net7.0\refint\CRMSyste
 C:\Users\aalia\source\repos\CRMSystem\CRMSystem\obj\Debug\net7.0\CRMSystem.pdb
 C:\Users\aalia\source\repos\CRMSystem\CRMSystem\obj\Debug\net7.0\CRMSystem.genruntimeconfig.cache
 C:\Users\aalia\source\repos\CRMSystem\CRMSystem\obj\Debug\net7.0\ref\CRMSystem.dll
+C:\Users\aalia\Source\Repos\CRMSystem\CRMSystem\obj\Debug\net7.0\CRMSystem.sourcelink.json

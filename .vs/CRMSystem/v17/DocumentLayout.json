@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{80DD14C9-723C-45B1-AE9B-5D7DB099691A}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{80DD14C9-723C-45B1-AE9B-5D7DB099691A}|CRMSystem\\CRMSystem.csproj|c:\\users\\aalia\\source\\repos\\crmsystem\\crmsystem\\pages\\fetchdata.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{80DD14C9-723C-45B1-AE9B-5D7DB099691A}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\pages\\fetchdata.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{80DD14C9-723C-45B1-AE9B-5D7DB099691A}|CRMSystem\\CRMSystem.csproj|c:\\users\\aalia\\source\\repos\\crmsystem\\crmsystem\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{80DD14C9-723C-45B1-AE9B-5D7DB099691A}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{80DD14C9-723C-45B1-AE9B-5D7DB099691A}|CRMSystem\\CRMSystem.csproj|c:\\users\\aalia\\source\\repos\\crmsystem\\crmsystem\\data\\weatherforecastservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80DD14C9-723C-45B1-AE9B-5D7DB099691A}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\data\\weatherforecastservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80DD14C9-723C-45B1-AE9B-5D7DB099691A}|CRMSystem\\CRMSystem.csproj|c:\\users\\aalia\\source\\repos\\crmsystem\\crmsystem\\pages\\fetchdata.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{80DD14C9-723C-45B1-AE9B-5D7DB099691A}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\pages\\fetchdata.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{80DD14C9-723C-45B1-AE9B-5D7DB099691A}|CRMSystem\\CRMSystem.csproj|c:\\users\\aalia\\source\\repos\\crmsystem\\crmsystem\\data\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "FetchData.razor",
               "DocumentMoniker": "C:\\Users\\aalia\\source\\repos\\CRMSystem\\CRMSystem\\Pages\\FetchData.razor",
               "RelativeDocumentMoniker": "CRMSystem\\Pages\\FetchData.razor",
@@ -62,8 +62,7 @@
               "RelativeToolTip": "CRMSystem\\Pages\\FetchData.razor",
               "ViewState": "AgIAACEAAAAAAAAAAAAAACwAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-20T12:23:01.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T12:23:01.553Z"
             },
             {
               "$type": "Document",
@@ -80,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Index.razor",
               "DocumentMoniker": "C:\\Users\\aalia\\source\\repos\\CRMSystem\\CRMSystem\\Pages\\Index.razor",
               "RelativeDocumentMoniker": "CRMSystem\\Pages\\Index.razor",
@@ -88,12 +87,11 @@
               "RelativeToolTip": "CRMSystem\\Pages\\Index.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-20T12:23:08.294Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T12:23:08.294Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "WeatherForecastService.cs",
               "DocumentMoniker": "C:\\Users\\aalia\\source\\repos\\CRMSystem\\CRMSystem\\Data\\WeatherForecastService.cs",
               "RelativeDocumentMoniker": "CRMSystem\\Data\\WeatherForecastService.cs",
@@ -101,8 +99,7 @@
               "RelativeToolTip": "CRMSystem\\Data\\WeatherForecastService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T12:22:47.914Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T12:22:47.914Z"
             },
             {
               "$type": "Document",
@@ -114,8 +111,7 @@
               "RelativeToolTip": "CRMSystem\\Data\\WeatherForecast.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T12:22:45.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T12:22:45.35Z"
             }
           ]
         }

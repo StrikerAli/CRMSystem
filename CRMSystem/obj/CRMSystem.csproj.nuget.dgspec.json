@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aalia\\source\\repos\\CRMSystem\\CRMSystem\\CRMSystem.csproj": {}
+    "C:\\Users\\aalia\\Source\\Repos\\CRMSystem\\CRMSystem\\CRMSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aalia\\source\\repos\\CRMSystem\\CRMSystem\\CRMSystem.csproj": {
+    "C:\\Users\\aalia\\Source\\Repos\\CRMSystem\\CRMSystem\\CRMSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aalia\\source\\repos\\CRMSystem\\CRMSystem\\CRMSystem.csproj",
+        "projectUniqueName": "C:\\Users\\aalia\\Source\\Repos\\CRMSystem\\CRMSystem\\CRMSystem.csproj",
         "projectName": "CRMSystem",
-        "projectPath": "C:\\Users\\aalia\\source\\repos\\CRMSystem\\CRMSystem\\CRMSystem.csproj",
+        "projectPath": "C:\\Users\\aalia\\Source\\Repos\\CRMSystem\\CRMSystem\\CRMSystem.csproj",
         "packagesPath": "C:\\Users\\aalia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aalia\\source\\repos\\CRMSystem\\CRMSystem\\obj\\",
+        "outputPath": "C:\\Users\\aalia\\Source\\Repos\\CRMSystem\\CRMSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
