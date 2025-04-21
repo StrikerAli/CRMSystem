@@ -1,0 +1,162 @@
+﻿@page "/dashboard"
+@using Microsoft.AspNetCore.Components.Authorization
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
+@using CRMSystem.Models
+@using CRMSystem.Data
+@inject AppDbContext _dbContext
+@using Microsoft.EntityFrameworkCore
+
+<PageTitle>Customer Dashboard</PageTitle>
+
+<!-- Only show content if the user is authenticated -->
+@if (!isAuthenticated)
+{
+    <p>You must be logged in to access the dashboard.</p>
+}
+else
+{
+
+    //simple  HTML CSS frontend for Dashboard and basic CRUD operations
+    <div style="padding: 2rem; background: linear-gradient(to bottom, #f8fbfc, #e6f7f8); min-height: 100vh;">
+        <h1 class="text-center mb-6" style="font-size: 2.5rem; font-weight: bold; color: #333;">Customer Dashboard</h1>
+
+        <div style="margin-bottom: 2rem;">
+            <h2 style="font-size: 1.5rem; color: #007b8f;">Add New Customer</h2>
+            <EditForm Model="newCustomer" OnValidSubmit="CreateCustomer">
+                <InputText @bind-Value="newCustomer.Name" placeholder="Name" class="form-control mb-2" />
+                <InputText @bind-Value="newCustomer.Email" placeholder="Email" class="form-control mb-2" />
+                <InputText @bind-Value="newCustomer.Phone" placeholder="Phone" class="form-control mb-2" />
+                <InputText @bind-Value="newCustomer.Address" placeholder="Address" class="form-control mb-2" />
+                <button type="submit" class="btn btn-primary">Add Customer</button>
+            </EditForm>
+        </div>
+
+        @if (customers == null)
+        {
+            <p>Loading...</p>
+        }
+        else if (customers.Count == 0)
+        {
+            <p>No customers found.</p>
+        }
+        else
+        {
+            <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                @foreach (var customer in customers)
+                {
+                    <div style="background: white; padding: 1.5rem; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); position: relative;">
+                        @if (editCustomer?.Id == customer.Id)
+                        {
+                            <!-- Edit Mode -->
+                            <EditForm Model="editCustomer" OnValidSubmit="()=>UpdateCustomer(customer.Id)">
+                                <InputText @bind-Value="editCustomer.Name" class="form-control mb-1" />
+                                <InputText @bind-Value="editCustomer.Email" class="form-control mb-1" />
+                                <InputText @bind-Value="editCustomer.Phone" class="form-control mb-1" />
+                                <InputText @bind-Value="editCustomer.Address" class="form-control mb-1" />
+                                <button type="submit" class="btn btn-success btn-sm">Save</button>
+                                <button type="button" class="btn btn-secondary btn-sm" @onclick="CancelEdit">Cancel</button>
+                            </EditForm>
+                        }
+                        else
+                        {
+                            <!-- Read Mode -->
+                            <h3 style="margin-bottom: 0.5rem; color: #007b8f;">@customer.Name</h3>
+                            <p style="margin: 0; font-size: 0.9rem;"><strong>Email:</strong> @customer.Email</p>
+                            <p style="margin: 0; font-size: 0.9rem;"><strong>Phone:</strong> @customer.Phone</p>
+                            <p style="margin: 0; font-size: 0.9rem;"><strong>Address:</strong> @customer.Address</p>
+
+                            <div style="margin-top: 1rem;">
+                                <button class="btn btn-warning btn-sm" @onclick="() => EditCustomer(customer)">Edit</button>
+                                <button class="btn btn-danger btn-sm" @onclick="() => DeleteCustomer(customer.Id)">Delete</button>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        }
+    </div>
+}
+
+@code {
+    List<Customer> customers;
+    Customer newCustomer = new Customer();
+    Customer editCustomer;
+    private bool isAuthenticated;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        isAuthenticated = user.Identity.IsAuthenticated;
+
+        // If not authenticated, redirect to the login page
+        if (!isAuthenticated)
+        {
+            NavigationManager.NavigateTo("/login");
+        }
+        else
+        {
+            // Load customers if authenticated
+            await LoadCustomers();
+        }
+    }
+
+    private async Task LoadCustomers()
+    {
+        customers = await _dbContext.Customers.ToListAsync();
+    }
+
+    private async Task CreateCustomer()
+    {
+        _dbContext.Customers.Add(newCustomer);
+        await _dbContext.SaveChangesAsync();
+        newCustomer = new Customer(); // reset form
+        await LoadCustomers();
+    }
+
+    private void EditCustomer(Customer customer)
+    {
+        editCustomer = new Customer
+            {
+                Id = customer.Id,
+                Name = customer.Name,
+                Email = customer.Email,
+                Phone = customer.Phone,
+                Address = customer.Address
+            };
+    }
+
+    private async Task UpdateCustomer(int id)
+    {
+        var customerToUpdate = await _dbContext.Customers.FindAsync(id);
+        if (customerToUpdate != null)
+        {
+            customerToUpdate.Name = editCustomer.Name;
+            customerToUpdate.Email = editCustomer.Email;
+            customerToUpdate.Phone = editCustomer.Phone;
+            customerToUpdate.Address = editCustomer.Address;
+
+            await _dbContext.SaveChangesAsync();
+            editCustomer = null;
+            await LoadCustomers();
+        }
+    }
+
+    private async Task DeleteCustomer(int id)
+    {
+        var customerToDelete = await _dbContext.Customers.FindAsync(id);
+        if (customerToDelete != null)
+        {
+            _dbContext.Customers.Remove(customerToDelete);
+            await _dbContext.SaveChangesAsync();
+            await LoadCustomers();
+        }
+    }
+
+    private void CancelEdit()
+    {
+        editCustomer = null;
+    }
+}

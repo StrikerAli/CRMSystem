@@ -1,0 +1,36 @@
+@page "/Account/Login"
+
+
+<!-- Razor page to handle login logic as Blazor to Blazor page navigation cannot be done during user log in. -->
+
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@functions {
+    public async Task OnGetAsync(string returnUrl, string email, string password)
+    {
+        returnUrl ??= "/dashboard";
+
+        if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+        {
+            Response.Redirect("/login");
+            return;
+        }
+
+        var user = await UserManager.FindByEmailAsync(email);
+        if (user != null)
+        {
+            var result = await SignInManager.PasswordSignInAsync(user, password, isPersistent: false, lockoutOnFailure: false);
+            if (result.Succeeded)
+            {
+                Response.Redirect(returnUrl);
+                return;
+            }
+        }
+
+        // Login failed
+        Response.Redirect("/login?error=InvalidCredentials");
+    }
+}
+

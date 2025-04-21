@@ -1,3 +1,5 @@
+wwwroot\assets\login-background.png
+wwwroot\assets\logo.png
 wwwroot\css\bootstrap\bootstrap.min.css
 wwwroot\css\bootstrap\bootstrap.min.css.map
 wwwroot\css\open-iconic\font\css\open-iconic-bootstrap.min.css

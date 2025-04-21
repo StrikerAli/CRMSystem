@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\CRMSystem.fvvr1pphws.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\aalia\\Source\\Repos\\CRMSystem\\CRMSystem\\wwwroot\\assets\\login-background.png",
+      "PackagePath": "staticwebassets\\assets\\login-background.png"
+    },
+    {
+      "Id": "C:\\Users\\aalia\\Source\\Repos\\CRMSystem\\CRMSystem\\wwwroot\\assets\\logo.png",
+      "PackagePath": "staticwebassets\\assets\\logo.png"
+    },
+    {
       "Id": "C:\\Users\\aalia\\Source\\Repos\\CRMSystem\\CRMSystem\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
